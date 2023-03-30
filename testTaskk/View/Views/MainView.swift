@@ -56,7 +56,7 @@ final class MainView: UIView {
     
     private var ingredientTableView = IngredientTableView()
     
-    private var addIngridientButton: AnimatedButton = {
+    private var addIngredientButton: AnimatedButton = {
         let button = AnimatedButton()
         button.backgroundColor = UIColor(red: 0.255, green: 0.565, blue: 0.584, alpha: 1)
         button.layer.cornerRadius = 5
@@ -118,7 +118,7 @@ final class MainView: UIView {
         addView(dishNameTextfield)
         addView(dishIngredientsLabel)
         addView(ingredientTableView)
-        addView(addIngridientButton)
+        addView(addIngredientButton)
         addView(imageLogo)
         addView(addImageButton)
         addView(propertiesStack)
@@ -151,7 +151,7 @@ final class MainView: UIView {
     }
     
     func addIngredientTarget(target: Any, action: Selector) {
-        addIngridientButton.addTarget(target, action: action, for: .touchUpInside)
+        addIngredientButton.addTarget(target, action: action, for: .touchUpInside)
     }
     
     func addIngredient(at row: Int) {
@@ -181,7 +181,7 @@ private extension MainView {
             categoryCollectionView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 15),
             categoryCollectionView.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
             categoryCollectionView.heightAnchor.constraint(equalToConstant: 24),
-            categoryCollectionView.widthAnchor.constraint(equalToConstant: 322),
+            categoryCollectionView.widthAnchor.constraint(equalToConstant: 435),
             
             deleteCategoryButton.topAnchor.constraint(equalTo: categoryCollectionView.bottomAnchor, constant: 5),
             deleteCategoryButton.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
@@ -206,12 +206,12 @@ private extension MainView {
             ingredientTableView.topAnchor.constraint(equalTo: dishIngredientsLabel.bottomAnchor, constant: 10),
             ingredientTableView.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
             ingredientTableView.widthAnchor.constraint(equalToConstant: 286),
-            ingredientTableView.bottomAnchor.constraint(equalTo: addIngridientButton.topAnchor, constant: -15),
+            ingredientTableView.bottomAnchor.constraint(equalTo: addIngredientButton.topAnchor, constant: -15),
             
-            addIngridientButton.bottomAnchor.constraint(equalTo: imageLogo.topAnchor, constant: -15),
-            addIngridientButton.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
-            addIngridientButton.widthAnchor.constraint(equalToConstant: 286),
-            addIngridientButton.heightAnchor.constraint(equalToConstant: 24),
+            addIngredientButton.bottomAnchor.constraint(equalTo: imageLogo.topAnchor, constant: -15),
+            addIngredientButton.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
+            addIngredientButton.widthAnchor.constraint(equalToConstant: 286),
+            addIngredientButton.heightAnchor.constraint(equalToConstant: 24),
         ])
     }
     

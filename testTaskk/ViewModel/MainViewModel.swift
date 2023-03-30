@@ -13,7 +13,7 @@ protocol MainViewModelProtocol {
     
     func loadIngredients(completion: @escaping (String?) -> Void)
     func loadCategories(completion: @escaping (String?) -> Void)
-    func addIngridient(name: String, completion: @escaping (String?) -> Void)
+    func addIngredient(name: String, completion: @escaping (String?) -> Void)
 }
 
 
@@ -50,8 +50,8 @@ final class MainViewModel: MainViewModelProtocol {
         }
     }
     
-    func addIngridient(name: String, completion: @escaping (String?) -> Void) {
-        networkManager?.addIngridient(name: name) { [weak self] error in
+    func addIngredient(name: String, completion: @escaping (String?) -> Void) {
+        networkManager?.addIngredient(name: name) { [weak self] error in
             guard let self = self else { return }
             
             if let error = error {
