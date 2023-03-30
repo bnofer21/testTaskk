@@ -9,6 +9,7 @@
 
 This is a test task made for iPadOS. You can add ingredients in tableView. UI made without using storyboards and self-sizing for both orientations and all screen sizes.
 Main view moves up when textfield becomes first responder, so you can type text and see it in textfield. Also, keyboard disappears when user tap around active textfield.
+Screnshoots are made on real device.
 
 # Stack
 MVVM, UIKit, Custom UI & Fonts, POP
