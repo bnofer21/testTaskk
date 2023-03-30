@@ -56,7 +56,7 @@ final class MainViewController: UIViewController {
     }
     
     private func getCategories() {
-        viewModel?.loadCategories(completion: { [weak self] error in
+        viewModel?.loadCategories { [weak self] error in
             guard let self = self else { return }
 
             if let error = error {
@@ -64,7 +64,7 @@ final class MainViewController: UIViewController {
             } else {
                 self.mainView.categoryCollectionView.viewModel = self.viewModel
             }
-        })
+        }
     }
     
     private func getIngredients() {
@@ -100,7 +100,7 @@ final class MainViewController: UIViewController {
     }
     
     private func addIngredient(name: String) {
-        viewModel?.addIngridient(name: name) { [weak self] error in
+        viewModel?.addIngredient(name: name) { [weak self] error in
             guard let self = self,
                   let viewModel = self.viewModel else { return }
             

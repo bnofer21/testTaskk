@@ -17,13 +17,13 @@ final class NetworkManager: NetworkManagerProtocol {
     
     func loadCategories(completion: @escaping ([String]?, String?) -> Void) {
         // simulated get request
-        let categories = ["Салаты", "Супы", "Фирменные блюда", "Основные", "Десерты", "Напитки"]
+        let categories = ["Салаты", "Супы", "Фирменные блюда", "Основные"]
         completion(categories, nil)
     }
     
     func loadIngredients(completion: @escaping ([String]?, String?) -> Void) {
         // simulated get request
-        let ingredients = ["Огурцы", "Помидоры", "Сыр"]
+        let ingredients = ["Огурцы", "Перец", "Спаржа", "Курица", "Помидор", "Мидии"]
         completion(ingredients, nil)
     }
     
