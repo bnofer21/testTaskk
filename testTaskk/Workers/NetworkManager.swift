@@ -10,7 +10,7 @@ import Foundation
 protocol NetworkManagerProtocol {
     func loadCategories(completion: @escaping ([String]?, String?) -> Void)
     func loadIngredients(completion: @escaping ([String]?, String?) -> Void)
-    func addIngridient(name: String, completion: @escaping (String?) -> Void)
+    func addIngredient(name: String, completion: @escaping (String?) -> Void)
 }
 
 final class NetworkManager: NetworkManagerProtocol {
@@ -27,7 +27,7 @@ final class NetworkManager: NetworkManagerProtocol {
         completion(ingredients, nil)
     }
     
-    func addIngridient(name: String, completion: @escaping (String?) -> Void) {
+    func addIngredient(name: String, completion: @escaping (String?) -> Void) {
         // simulated post request
         completion(nil)
     }
